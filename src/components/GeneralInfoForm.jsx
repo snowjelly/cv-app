@@ -3,7 +3,7 @@ export default function GeneralInfoForm({
   lastName,
   email,
   phoneNumber,
-  setCvData,
+  setData,
 }) {
   return (
     <section>
@@ -12,8 +12,8 @@ export default function GeneralInfoForm({
         value={firstName}
         id="first-name-input"
         onChange={(e) =>
-          setCvData((prevCvData) => ({
-            ...prevCvData,
+          setData((prevData) => ({
+            ...prevData,
             firstName: e.target.value,
           }))
         }
@@ -23,8 +23,8 @@ export default function GeneralInfoForm({
         value={lastName}
         id="last-name-input"
         onChange={(e) =>
-          setCvData((prevCvData) => ({
-            ...prevCvData,
+          setData((prevData) => ({
+            ...prevData,
             lastName: e.target.value,
           }))
         }
@@ -35,8 +35,8 @@ export default function GeneralInfoForm({
         id="email-input"
         value={email}
         onChange={(e) =>
-          setCvData((prevCvData) => ({
-            ...prevCvData,
+          setData((prevData) => ({
+            ...prevData,
             email: e.target.value,
           }))
         }
@@ -47,8 +47,8 @@ export default function GeneralInfoForm({
         id="phone-number-input"
         value={phoneNumber}
         onChange={(e) =>
-          setCvData((prevCvData) => ({
-            ...prevCvData,
+          setData((prevData) => ({
+            ...prevData,
             phoneNumber: e.target.value,
           }))
         }
