@@ -1,43 +1,37 @@
-export default function EducationalExperienceForm({
-  schoolName,
-  titleOfStudy,
-  dateOfStudy,
-  setData,
-}) {
+import { useState } from "react";
+import FormInput from "./FormInput";
+
+export default function EducationalExperienceForm() {
+  const [educationalExperienceData, setEducationalExperienceData] = useState({
+    schoolName: "",
+    titleOfStudy: "",
+    dateOfStudy: "",
+  });
+
+  const { schoolName, titleOfStudy, dateOfStudy } = educationalExperienceData;
+
   return (
     <section>
-      <input
+      <FormInput
         type="text"
         value={schoolName}
+        valueAsStr="schoolName"
         id="school-name-input"
-        onChange={(e) =>
-          setData((prevData) => ({
-            ...prevData,
-            schoolName: e.target.value,
-          }))
-        }
+        setData={setEducationalExperienceData}
       />
-      <input
+      <FormInput
         type="text"
         value={titleOfStudy}
+        valueAsStr="titleOfStudy"
         id="title-of-study-input"
-        onChange={(e) =>
-          setData((prevData) => ({
-            ...prevData,
-            titleOfStudy: e.target.value,
-          }))
-        }
+        setData={setEducationalExperienceData}
       />
-      <input
+      <FormInput
         type="text"
         value={dateOfStudy}
+        valueAsStr="dateOfStudy"
         id="date-of-study-input"
-        onChange={(e) =>
-          setData((prevData) => ({
-            ...prevData,
-            dateOfStudy: e.target.value,
-          }))
-        }
+        setData={setEducationalExperienceData}
       />
     </section>
   );

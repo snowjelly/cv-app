@@ -13,14 +13,6 @@ function App() {
 
   const { firstName, lastName, email, phoneNumber } = generalInfoData;
 
-  const [educationalExperienceData, setEducationalExperienceData] = useState({
-    schoolName: "",
-    titleOfStudy: "",
-    dateOfStudy: "",
-  });
-
-  const { schoolName, titleOfStudy, dateOfStudy } = educationalExperienceData;
-
   const [practicalExperienceData, setPracticalExperienceData] = useState({
     companyName: "",
     positionTitle: "",
@@ -38,12 +30,7 @@ function App() {
         phoneNumber={phoneNumber}
         setData={setGeneralInfoData}
       />
-      <EducationalExperienceForm
-        schoolName={schoolName}
-        titleOfStudy={titleOfStudy}
-        dateOfStudy={dateOfStudy}
-        setData={setEducationalExperienceData}
-      />
+      <EducationalExperienceForm />
     </>
   );
 }
