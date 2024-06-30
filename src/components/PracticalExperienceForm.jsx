@@ -1,45 +1,60 @@
-export default function EducationalExperienceForm({
-  companyName,
-  positionTitle,
-  mainResponsibilities,
-  workedFrom,
-  workedUntil,
-  setData,
-}) {
+import { useState } from "react";
+import FormInput from "./FormInput";
+import FormButton from "./FormButton";
+
+export default function PracticalExperienceForm() {
+  const [practicalExperienceData, setPracticalExperienceData] = useState({
+    companyName: "",
+    positionTitle: "",
+    mainResponsibilities: "",
+    workedFrom: "",
+    workedUntil: "",
+  });
+
+  const {
+    companyName,
+    positionTitle,
+    mainResponsibilities,
+    workedFrom,
+    workedUntil,
+  } = practicalExperienceData;
+
   return (
     <section>
-      <input
+      <FormInput
+        id="company-name-input"
         type="text"
         value={companyName}
-        id="company-name-input"
-        onChange={(e) =>
-          setData((prevData) => ({
-            ...prevData,
-            companyName: e.target.value,
-          }))
-        }
+        valueAsStr="companyName"
+        setData={setPracticalExperienceData}
       />
-      <input
+      <FormInput
+        id="position-title-input"
         type="text"
-        value={titleOfStudy}
-        id="title-of-study-input"
-        onChange={(e) =>
-          setData((prevData) => ({
-            ...prevData,
-            titleOfStudy: e.target.value,
-          }))
-        }
+        value={positionTitle}
+        valueAsStr="positionTitle"
+        setData={setPracticalExperienceData}
       />
-      <input
+      <FormInput
+        id="main-responsibilities-input"
         type="text"
-        value={dateOfStudy}
-        id="date-of-study-input"
-        onChange={(e) =>
-          setData((prevData) => ({
-            ...prevData,
-            dateOfStudy: e.target.value,
-          }))
-        }
+        value={mainResponsibilities}
+        valueAsStr="mainResponsibilities"
+        setData={setPracticalExperienceData}
+      />
+      <FormInput
+        id="worked-from-input"
+        type="text"
+        value={workedFrom}
+        valueAsStr="workedFrom"
+        setData={setPracticalExperienceData}
+      />
+      <FormInput
+        id="worked-until-input"
+        type="text"
+        value={workedUntil}
+        valueAsStr="workedUntil"
+        setData={setPracticalExperienceData}
       />
     </section>
   );
