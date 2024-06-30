@@ -9,30 +9,33 @@ export default function GeneralInfoForm({
 }) {
   return (
     <section className="general-info-form-section form-section">
-      <h3>First Name:</h3>
       <FormInput
         id="first-name-input"
         type="text"
         value={firstName}
         valueAsStr="firstName"
         setData={setGeneralInfoData}
-      />
-      <h3>Last Name:</h3>
+      >
+        <h3>First Name:</h3>
+      </FormInput>
       <FormInput
         id="last-name-input"
         type="text"
         value={lastName}
         valueAsStr="lastName"
         setData={setGeneralInfoData}
-      />
-      <h3>Email Address:</h3>
+      >
+        <h3>Last Name:</h3>
+      </FormInput>
       <FormInput
         id="email-input"
         type="email"
         value={email}
         valueAsStr="email"
         setData={setGeneralInfoData}
-      />
+      >
+        <h3>Email Address:</h3>
+      </FormInput>
       <h3>Phone Number:</h3>
       <FormInput
         id="phone-number-input"
