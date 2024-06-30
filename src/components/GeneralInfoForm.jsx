@@ -1,57 +1,45 @@
-export default function GeneralInfoForm({
-  firstName,
-  lastName,
-  email,
-  phoneNumber,
-  setData,
-}) {
+import { useState } from "react";
+import FormInput from "./FormInput";
+
+export default function GeneralInfoForm() {
+  const [generalInfoData, setGeneralInfoData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+  });
+
+  const { firstName, lastName, email, phoneNumber } = generalInfoData;
+
   return (
     <section>
-      <input
+      <FormInput
+        id="first-name-input"
         type="text"
         value={firstName}
-        id="first-name-input"
-        onChange={(e) =>
-          setData((prevData) => ({
-            ...prevData,
-            firstName: e.target.value,
-          }))
-        }
+        valueAsStr="firstName"
+        setData={setGeneralInfoData}
       />
-      <input
+      <FormInput
+        id="last-name-input"
         type="text"
         value={lastName}
-        id="last-name-input"
-        onChange={(e) =>
-          setData((prevData) => ({
-            ...prevData,
-            lastName: e.target.value,
-          }))
-        }
+        valueAsStr="lastName"
+        setData={setGeneralInfoData}
       />
-      <input
-        type="email"
-        name="email-input"
+      <FormInput
         id="email-input"
+        type="email"
         value={email}
-        onChange={(e) =>
-          setData((prevData) => ({
-            ...prevData,
-            email: e.target.value,
-          }))
-        }
+        valueAsStr="email"
+        setData={setGeneralInfoData}
       />
-      <input
-        type="tel"
-        name="phone-number-input"
+      <FormInput
         id="phone-number-input"
+        type="tel"
         value={phoneNumber}
-        onChange={(e) =>
-          setData((prevData) => ({
-            ...prevData,
-            phoneNumber: e.target.value,
-          }))
-        }
+        valueAsStr="phoneNumber"
+        setData={setGeneralInfoData}
       />
     </section>
   );
