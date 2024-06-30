@@ -3,6 +3,7 @@ import { useState } from "react";
 import GeneralInfoForm from "./components/GeneralInfoForm";
 import EducationalExperienceForm from "./components/EducationalExperienceForm";
 import PracticalExperienceForm from "./components/PracticalExperienceForm";
+import FormButton from "./components/FormButton";
 
 function App() {
   const [generalInfoData, setGeneralInfoData] = useState({
@@ -36,29 +37,39 @@ function App() {
     workedUntil,
   } = practicalExperienceData;
 
+  const handleSubmit = (e) => {};
+
+  const handleEdit = (e) => {};
+
   return (
     <form id="cv-form">
-      <GeneralInfoForm
-        firstName={firstName}
-        lastName={lastName}
-        email={email}
-        phoneNumber={phoneNumber}
-        setGeneralInfoData={setGeneralInfoData}
-      />
-      <EducationalExperienceForm
-        schoolName={schoolName}
-        titleOfStudy={titleOfStudy}
-        dateOfStudy={dateOfStudy}
-        setEducationalExperienceData={setEducationalExperienceData}
-      />
-      <PracticalExperienceForm
-        companyName={companyName}
-        positionTitle={positionTitle}
-        mainResponsibilities={mainResponsibilities}
-        workedFrom={workedFrom}
-        workedUntil={workedUntil}
-        setPracticalExperienceData={setPracticalExperienceData}
-      />
+      <div className="cv-form-section-container">
+        <GeneralInfoForm
+          firstName={firstName}
+          lastName={lastName}
+          email={email}
+          phoneNumber={phoneNumber}
+          setGeneralInfoData={setGeneralInfoData}
+        />
+        <EducationalExperienceForm
+          schoolName={schoolName}
+          titleOfStudy={titleOfStudy}
+          dateOfStudy={dateOfStudy}
+          setEducationalExperienceData={setEducationalExperienceData}
+        />
+        <PracticalExperienceForm
+          companyName={companyName}
+          positionTitle={positionTitle}
+          mainResponsibilities={mainResponsibilities}
+          workedFrom={workedFrom}
+          workedUntil={workedUntil}
+          setPracticalExperienceData={setPracticalExperienceData}
+        />
+      </div>
+      <div className="cv-form-btn-container">
+        <FormButton id="cv-form-submit-btn" onClick={handleSubmit} />
+        <FormButton id="cv-form-edit-btn" onClick={handleEdit} />
+      </div>
     </form>
   );
 }
