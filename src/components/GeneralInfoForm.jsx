@@ -1,4 +1,5 @@
 import FormInput from "./FormInput";
+import FormInputContainer from "./FormInputContainer";
 
 export default function GeneralInfoForm({
   firstName,
@@ -9,41 +10,46 @@ export default function GeneralInfoForm({
 }) {
   return (
     <section className="general-info-form-section form-section">
-      <FormInput
-        id="first-name-input"
-        type="text"
-        value={firstName}
-        valueAsStr="firstName"
-        setData={setGeneralInfoData}
-      >
+      <FormInputContainer>
         <h3>First Name:</h3>
-      </FormInput>
-      <FormInput
-        id="last-name-input"
-        type="text"
-        value={lastName}
-        valueAsStr="lastName"
-        setData={setGeneralInfoData}
-      >
+        <FormInput
+          id="first-name-input"
+          type="text"
+          value={firstName}
+          valueAsStr="firstName"
+          setData={setGeneralInfoData}
+        />
+      </FormInputContainer>
+      <FormInputContainer>
         <h3>Last Name:</h3>
-      </FormInput>
-      <FormInput
-        id="email-input"
-        type="email"
-        value={email}
-        valueAsStr="email"
-        setData={setGeneralInfoData}
-      >
+        <FormInput
+          id="last-name-input"
+          type="text"
+          value={lastName}
+          valueAsStr="lastName"
+          setData={setGeneralInfoData}
+        />
+      </FormInputContainer>
+      <FormInputContainer>
         <h3>Email Address:</h3>
-      </FormInput>
-      <h3>Phone Number:</h3>
-      <FormInput
-        id="phone-number-input"
-        type="tel"
-        value={phoneNumber}
-        valueAsStr="phoneNumber"
-        setData={setGeneralInfoData}
-      />
+        <FormInput
+          id="email-input"
+          type="email"
+          value={email}
+          valueAsStr="email"
+          setData={setGeneralInfoData}
+        />
+      </FormInputContainer>
+      <FormInputContainer>
+        <h3>Phone Number:</h3>
+        <FormInput
+          id="phone-number-input"
+          type="tel"
+          value={phoneNumber}
+          valueAsStr="phoneNumber"
+          setData={setGeneralInfoData}
+        />
+      </FormInputContainer>
     </section>
   );
 }
