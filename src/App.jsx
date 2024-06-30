@@ -43,7 +43,9 @@ function App() {
 
   return (
     <form id="cv-form">
+      <h1>Cv Form</h1>
       <div className="cv-form-section-container">
+        <h2>General Info</h2>
         <GeneralInfoForm
           firstName={firstName}
           lastName={lastName}
@@ -51,12 +53,14 @@ function App() {
           phoneNumber={phoneNumber}
           setGeneralInfoData={setGeneralInfoData}
         />
+        <h2>Educational Experience</h2>
         <EducationalExperienceForm
           schoolName={schoolName}
           titleOfStudy={titleOfStudy}
           dateOfStudy={dateOfStudy}
           setEducationalExperienceData={setEducationalExperienceData}
         />
+        <h2>Practical Experience</h2>
         <PracticalExperienceForm
           companyName={companyName}
           positionTitle={positionTitle}
@@ -67,8 +71,12 @@ function App() {
         />
       </div>
       <div className="cv-form-btn-container">
-        <FormButton id="cv-form-submit-btn" onClick={handleSubmit} />
-        <FormButton id="cv-form-edit-btn" onClick={handleEdit} />
+        <FormButton id="cv-form-edit-btn" onClick={handleEdit}>
+          Edit
+        </FormButton>
+        <FormButton id="cv-form-submit-btn" onClick={handleSubmit}>
+          Submit
+        </FormButton>
       </div>
     </form>
   );

@@ -1,10 +1,26 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+#cv-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card {
-  padding: 2em;
+.form-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-form-btn-container > * {
+  margin: 1rem;
+}
+
+@media (min-width: 800px) {
+  .form-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+  }
+  .cv-form-section-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }

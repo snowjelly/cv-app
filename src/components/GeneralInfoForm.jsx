@@ -9,6 +9,7 @@ export default function GeneralInfoForm({
 }) {
   return (
     <section className="general-info-form-section form-section">
+      <h3>First Name:</h3>
       <FormInput
         id="first-name-input"
         type="text"
@@ -16,6 +17,7 @@ export default function GeneralInfoForm({
         valueAsStr="firstName"
         setData={setGeneralInfoData}
       />
+      <h3>Last Name:</h3>
       <FormInput
         id="last-name-input"
         type="text"
@@ -23,6 +25,7 @@ export default function GeneralInfoForm({
         valueAsStr="lastName"
         setData={setGeneralInfoData}
       />
+      <h3>Email Address:</h3>
       <FormInput
         id="email-input"
         type="email"
@@ -30,6 +33,7 @@ export default function GeneralInfoForm({
         valueAsStr="email"
         setData={setGeneralInfoData}
       />
+      <h3>Phone Number:</h3>
       <FormInput
         id="phone-number-input"
         type="tel"

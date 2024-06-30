@@ -8,6 +8,7 @@ export default function EducationalExperienceForm({
 }) {
   return (
     <section className="educational-experience-form-section form-section">
+      <h3>School:</h3>
       <FormInput
         type="text"
         value={schoolName}
@@ -15,6 +16,7 @@ export default function EducationalExperienceForm({
         id="school-name-input"
         setData={setEducationalExperienceData}
       />
+      <h3>Study:</h3>
       <FormInput
         type="text"
         value={titleOfStudy}
@@ -22,6 +24,7 @@ export default function EducationalExperienceForm({
         id="title-of-study-input"
         setData={setEducationalExperienceData}
       />
+      <h3>Study Date:</h3>
       <FormInput
         type="text"
         value={dateOfStudy}
