@@ -1,24 +1,13 @@
-import { useState } from "react";
 import FormInput from "./FormInput";
-import FormButton from "./FormButton";
 
-export default function PracticalExperienceForm() {
-  const [practicalExperienceData, setPracticalExperienceData] = useState({
-    companyName: "",
-    positionTitle: "",
-    mainResponsibilities: "",
-    workedFrom: "",
-    workedUntil: "",
-  });
-
-  const {
-    companyName,
-    positionTitle,
-    mainResponsibilities,
-    workedFrom,
-    workedUntil,
-  } = practicalExperienceData;
-
+export default function PracticalExperienceForm({
+  companyName,
+  positionTitle,
+  mainResponsibilities,
+  workedFrom,
+  workedUntil,
+  setPracticalExperienceData,
+}) {
   return (
     <section>
       <FormInput

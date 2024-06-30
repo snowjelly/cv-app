@@ -1,16 +1,12 @@
-import { useState } from "react";
 import FormInput from "./FormInput";
 
-export default function GeneralInfoForm() {
-  const [generalInfoData, setGeneralInfoData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-  });
-
-  const { firstName, lastName, email, phoneNumber } = generalInfoData;
-
+export default function GeneralInfoForm({
+  firstName,
+  lastName,
+  email,
+  phoneNumber,
+  setGeneralInfoData,
+}) {
   return (
     <section>
       <FormInput

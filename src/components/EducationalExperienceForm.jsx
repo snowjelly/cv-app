@@ -1,15 +1,11 @@
-import { useState } from "react";
 import FormInput from "./FormInput";
 
-export default function EducationalExperienceForm() {
-  const [educationalExperienceData, setEducationalExperienceData] = useState({
-    schoolName: "",
-    titleOfStudy: "",
-    dateOfStudy: "",
-  });
-
-  const { schoolName, titleOfStudy, dateOfStudy } = educationalExperienceData;
-
+export default function EducationalExperienceForm({
+  schoolName,
+  titleOfStudy,
+  dateOfStudy,
+  setEducationalExperienceData,
+}) {
   return (
     <section>
       <FormInput
