@@ -8,7 +8,7 @@ export default function GeneralInfoForm({
   setGeneralInfoData,
 }) {
   return (
-    <section>
+    <section className="general-info-form-section form-section">
       <FormInput
         id="first-name-input"
         type="text"

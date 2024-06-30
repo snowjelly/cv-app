@@ -37,7 +37,7 @@ function App() {
   } = practicalExperienceData;
 
   return (
-    <>
+    <form id="cv-form">
       <GeneralInfoForm
         firstName={firstName}
         lastName={lastName}
@@ -59,7 +59,7 @@ function App() {
         workedUntil={workedUntil}
         setPracticalExperienceData={setPracticalExperienceData}
       />
-    </>
+    </form>
   );
 }
 

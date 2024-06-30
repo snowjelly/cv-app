@@ -7,7 +7,7 @@ export default function EducationalExperienceForm({
   setEducationalExperienceData,
 }) {
   return (
-    <section>
+    <section className="educational-experience-form-section form-section">
       <FormInput
         type="text"
         value={schoolName}

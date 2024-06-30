@@ -9,7 +9,7 @@ export default function PracticalExperienceForm({
   setPracticalExperienceData,
 }) {
   return (
-    <section>
+    <section className="practical-experience-form-section form-section">
       <FormInput
         id="company-name-input"
         type="text"
