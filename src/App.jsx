@@ -1,9 +1,9 @@
 import "./App.css";
 import { useState } from "react";
-import GeneralInfoForm from "./components/GeneralInfoForm";
 import EducationalExperienceForm from "./components/EducationalExperienceForm";
 import PracticalExperienceForm from "./components/PracticalExperienceForm";
 import FormButton from "./components/FormButton";
+import FormDataSection from "./components/FormDataSection";
 
 function App() {
   const [generalInfoData, setGeneralInfoData] = useState({
@@ -39,6 +39,33 @@ function App() {
     workedUntil,
   } = practicalExperienceData;
 
+  const generalInfoCvFormData = [
+    {
+      headerStr: "First Name:",
+      id: "first-name",
+      type: "text",
+      value: firstName,
+    },
+    {
+      headerStr: "Last Name:",
+      id: "last-name",
+      type: "text",
+      value: lastName,
+    },
+    {
+      headerStr: "Email Address:",
+      id: "email",
+      type: "email",
+      value: email,
+    },
+    {
+      headerStr: "Phone Number:",
+      id: "phone-number",
+      type: "text",
+      value: phoneNumber,
+    },
+  ];
+
   const handleEdit = (e) => {
     setIsSubmitted(false);
   };
@@ -57,13 +84,11 @@ function App() {
       <div className="cv-form-section-container">
         <div className="cv-form-section-content">
           <h2>General Info</h2>
-          <GeneralInfoForm
-            firstName={firstName}
-            lastName={lastName}
-            email={email}
-            phoneNumber={phoneNumber}
-            setGeneralInfoData={setGeneralInfoData}
+          <FormDataSection
+            cvFormData={generalInfoCvFormData}
+            setData={setGeneralInfoData}
             isSubmitted={isSubmitted}
+            name="general-info"
           />
         </div>
         <div className="cv-form-section-content">
