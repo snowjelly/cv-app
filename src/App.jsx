@@ -43,32 +43,42 @@ function App() {
 
   return (
     <form id="cv-form">
-      <h1>Cv Form</h1>
+      <div className="cv-form-header">
+        <div className="cv-form-title">
+          <h1>Cv Form</h1>
+        </div>
+      </div>
       <div className="cv-form-section-container">
-        <h2>General Info</h2>
-        <GeneralInfoForm
-          firstName={firstName}
-          lastName={lastName}
-          email={email}
-          phoneNumber={phoneNumber}
-          setGeneralInfoData={setGeneralInfoData}
-        />
-        <h2>Educational Experience</h2>
-        <EducationalExperienceForm
-          schoolName={schoolName}
-          titleOfStudy={titleOfStudy}
-          dateOfStudy={dateOfStudy}
-          setEducationalExperienceData={setEducationalExperienceData}
-        />
-        <h2>Practical Experience</h2>
-        <PracticalExperienceForm
-          companyName={companyName}
-          positionTitle={positionTitle}
-          mainResponsibilities={mainResponsibilities}
-          workedFrom={workedFrom}
-          workedUntil={workedUntil}
-          setPracticalExperienceData={setPracticalExperienceData}
-        />
+        <div className="cv-form-section-content">
+          <h2>General Info</h2>
+          <GeneralInfoForm
+            firstName={firstName}
+            lastName={lastName}
+            email={email}
+            phoneNumber={phoneNumber}
+            setGeneralInfoData={setGeneralInfoData}
+          />
+        </div>
+        <div className="cv-form-section-content">
+          <h2>Educational Experience</h2>
+          <EducationalExperienceForm
+            schoolName={schoolName}
+            titleOfStudy={titleOfStudy}
+            dateOfStudy={dateOfStudy}
+            setEducationalExperienceData={setEducationalExperienceData}
+          />
+        </div>
+        <div className="cv-form-section-content">
+          <h2>Practical Experience</h2>
+          <PracticalExperienceForm
+            companyName={companyName}
+            positionTitle={positionTitle}
+            mainResponsibilities={mainResponsibilities}
+            workedFrom={workedFrom}
+            workedUntil={workedUntil}
+            setPracticalExperienceData={setPracticalExperienceData}
+          />
+        </div>
       </div>
       <div className="cv-form-btn-container">
         <FormButton id="cv-form-edit-btn" onClick={handleEdit}>

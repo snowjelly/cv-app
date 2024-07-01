@@ -1,5 +1,4 @@
 import FormInput from "./FormInput";
-import FormInputContainer from "./FormInputContainer";
 
 export default function GeneralInfoForm({
   firstName,
@@ -10,7 +9,7 @@ export default function GeneralInfoForm({
 }) {
   return (
     <section className="general-info-form-section form-section">
-      <FormInputContainer>
+      <div className="form-input-container">
         <h3>First Name:</h3>
         <FormInput
           id="first-name-input"
@@ -19,8 +18,8 @@ export default function GeneralInfoForm({
           valueAsStr="firstName"
           setData={setGeneralInfoData}
         />
-      </FormInputContainer>
-      <FormInputContainer>
+      </div>
+      <div className="form-input-container">
         <h3>Last Name:</h3>
         <FormInput
           id="last-name-input"
@@ -29,8 +28,8 @@ export default function GeneralInfoForm({
           valueAsStr="lastName"
           setData={setGeneralInfoData}
         />
-      </FormInputContainer>
-      <FormInputContainer>
+      </div>
+      <div className="form-input-container">
         <h3>Email Address:</h3>
         <FormInput
           id="email-input"
@@ -39,8 +38,8 @@ export default function GeneralInfoForm({
           valueAsStr="email"
           setData={setGeneralInfoData}
         />
-      </FormInputContainer>
-      <FormInputContainer>
+      </div>
+      <div className="form-input-container">
         <h3>Phone Number:</h3>
         <FormInput
           id="phone-number-input"
@@ -49,7 +48,7 @@ export default function GeneralInfoForm({
           valueAsStr="phoneNumber"
           setData={setGeneralInfoData}
         />
-      </FormInputContainer>
+      </div>
     </section>
   );
 }

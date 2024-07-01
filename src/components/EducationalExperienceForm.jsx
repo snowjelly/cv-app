@@ -1,5 +1,4 @@
 import FormInput from "./FormInput";
-import FormInputContainer from "./FormInputContainer";
 
 export default function EducationalExperienceForm({
   schoolName,
@@ -9,7 +8,7 @@ export default function EducationalExperienceForm({
 }) {
   return (
     <section className="educational-experience-form-section form-section">
-      <FormInputContainer>
+      <div className="form-input-container">
         <h3>School:</h3>
         <FormInput
           type="text"
@@ -18,8 +17,8 @@ export default function EducationalExperienceForm({
           id="school-name-input"
           setData={setEducationalExperienceData}
         />
-      </FormInputContainer>
-      <FormInputContainer>
+      </div>
+      <div className="form-input-container">
         <h3>Study:</h3>
         <FormInput
           type="text"
@@ -28,8 +27,8 @@ export default function EducationalExperienceForm({
           id="title-of-study-input"
           setData={setEducationalExperienceData}
         />
-      </FormInputContainer>
-      <FormInputContainer>
+      </div>
+      <div className="form-input-container">
         <h3>Study Date:</h3>
         <FormInput
           type="text"
@@ -38,7 +37,7 @@ export default function EducationalExperienceForm({
           id="date-of-study-input"
           setData={setEducationalExperienceData}
         />
-      </FormInputContainer>
+      </div>
     </section>
   );
 }
