@@ -1,4 +1,4 @@
-import FormInput from "./FormInput";
+import CvFormData from "./CvFormData";
 
 export default function GeneralInfoForm({
   firstName,
@@ -6,49 +6,42 @@ export default function GeneralInfoForm({
   email,
   phoneNumber,
   setGeneralInfoData,
+  isSubmitted,
 }) {
   return (
     <section className="general-info-form-section form-section">
-      <div className="form-input-container">
-        <h3>First Name:</h3>
-        <FormInput
-          id="first-name-input"
-          type="text"
-          value={firstName}
-          valueAsStr="firstName"
-          setData={setGeneralInfoData}
-        />
-      </div>
-      <div className="form-input-container">
-        <h3>Last Name:</h3>
-        <FormInput
-          id="last-name-input"
-          type="text"
-          value={lastName}
-          valueAsStr="lastName"
-          setData={setGeneralInfoData}
-        />
-      </div>
-      <div className="form-input-container">
-        <h3>Email Address:</h3>
-        <FormInput
-          id="email-input"
-          type="email"
-          value={email}
-          valueAsStr="email"
-          setData={setGeneralInfoData}
-        />
-      </div>
-      <div className="form-input-container">
-        <h3>Phone Number:</h3>
-        <FormInput
-          id="phone-number-input"
-          type="tel"
-          value={phoneNumber}
-          valueAsStr="phoneNumber"
-          setData={setGeneralInfoData}
-        />
-      </div>
+      <CvFormData
+        headerStr="First Name:"
+        id="first-name"
+        formInputType="text"
+        formInputValue={firstName}
+        formInputSetData={setGeneralInfoData}
+        isSubmitted={isSubmitted}
+      />
+      <CvFormData
+        headerStr="Last Name:"
+        id="last-name"
+        formInputType="text"
+        formInputValue={lastName}
+        formInputSetData={setGeneralInfoData}
+        isSubmitted={isSubmitted}
+      />
+      <CvFormData
+        headerStr="Email Address:"
+        id="email"
+        formInputType="email"
+        formInputValue={email}
+        formInputSetData={setGeneralInfoData}
+        isSubmitted={isSubmitted}
+      />
+      <CvFormData
+        headerStr="Phone Number:"
+        id="phone-number"
+        formInputType="tel"
+        formInputValue={phoneNumber}
+        formInputSetData={setGeneralInfoData}
+        isSubmitted={isSubmitted}
+      />
     </section>
   );
 }

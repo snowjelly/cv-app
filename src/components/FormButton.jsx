@@ -1,6 +1,6 @@
-export default function FormButton({ id, onClick, children }) {
+export default function FormButton({ id, onClick, className, children }) {
   return (
-    <button id={id} type="button" onClick={(e) => onClick}>
+    <button id={id} type="button" onClick={onClick} className={className}>
       {children}
     </button>
   );

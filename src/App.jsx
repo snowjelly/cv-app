@@ -27,6 +27,8 @@ function App() {
     workedUntil: "",
   });
 
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const { firstName, lastName, email, phoneNumber } = generalInfoData;
   const { schoolName, titleOfStudy, dateOfStudy } = educationalExperienceData;
   const {
@@ -37,9 +39,13 @@ function App() {
     workedUntil,
   } = practicalExperienceData;
 
-  const handleSubmit = (e) => {};
+  const handleEdit = (e) => {
+    setIsSubmitted(false);
+  };
 
-  const handleEdit = (e) => {};
+  const handleSubmit = (e) => {
+    setIsSubmitted(true);
+  };
 
   return (
     <form id="cv-form">
@@ -57,6 +63,7 @@ function App() {
             email={email}
             phoneNumber={phoneNumber}
             setGeneralInfoData={setGeneralInfoData}
+            isSubmitted={isSubmitted}
           />
         </div>
         <div className="cv-form-section-content">
@@ -81,10 +88,18 @@ function App() {
         </div>
       </div>
       <div className="cv-form-btn-container">
-        <FormButton id="cv-form-edit-btn" onClick={handleEdit}>
+        <FormButton
+          id="cv-form-edit-btn"
+          onClick={handleEdit}
+          className="cv-form-btn"
+        >
           Edit
         </FormButton>
-        <FormButton id="cv-form-submit-btn" onClick={handleSubmit}>
+        <FormButton
+          id="cv-form-submit-btn"
+          onClick={handleSubmit}
+          className="cv-form-btn"
+        >
           Submit
         </FormButton>
       </div>
