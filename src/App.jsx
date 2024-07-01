@@ -103,7 +103,7 @@ function App() {
     {
       headerStr: "Main Responsibilities:",
       id: "main-responsibilities",
-      type: "text",
+      type: "textarea",
       value: mainResponsibilities,
     },
     {

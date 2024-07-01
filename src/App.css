@@ -32,7 +32,22 @@
   will-change: transform;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 481px) {
   .form-input-container {
+    grid-template-columns: 1fr 0.3fr;
+    align-items: center;
+  }
+
+  .form-input {
+    height: 25%;
+  }
+}
+
+@media (min-width: 769px) {
+  .form-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
   }
 }

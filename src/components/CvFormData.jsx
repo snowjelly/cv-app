@@ -9,13 +9,13 @@ export default function CvFormData({
   isSubmitted,
 }) {
   return isSubmitted ? (
-    <div className="form-input-container">
-      <h3>{headerStr}</h3>
+    <div className={`form-input-container ${id}-container`}>
+      <h3 className={`form-input-header ${id}-input-header`}>{headerStr}</h3>
       <h4>{formInputValue}</h4>
     </div>
   ) : (
-    <div className="form-input-container">
-      <h3>{headerStr}</h3>
+    <div className={`form-input-container ${id}-container`}>
+      <h3 className={`form-input-header ${id}-input-header`}>{headerStr}</h3>
       <FormInput
         id={id}
         type={formInputType}
