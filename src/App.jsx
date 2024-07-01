@@ -66,6 +66,60 @@ function App() {
     },
   ];
 
+  const educationalExperienceCvFormData = [
+    {
+      headerStr: "School:",
+      id: "school-name",
+      type: "text",
+      value: schoolName,
+    },
+    {
+      headerStr: "Study:",
+      id: "title-of-study",
+      type: "text",
+      value: titleOfStudy,
+    },
+    {
+      headerStr: "Study Date:",
+      id: "date-of-study",
+      type: "text",
+      value: dateOfStudy,
+    },
+  ];
+
+  const practicalExperienceCvFormData = [
+    {
+      headerStr: "Company Name:",
+      id: "company-name",
+      type: "text",
+      value: companyName,
+    },
+    {
+      headerStr: "Position:",
+      id: "position-title",
+      type: "text",
+      value: positionTitle,
+    },
+    {
+      headerStr: "Main Responsibilities:",
+      id: "main-responsibilities",
+      type: "text",
+      value: mainResponsibilities,
+    },
+    {
+      headerStr: "Worked From:",
+      id: "worked-from",
+      type: "text",
+      value: workedFrom,
+    },
+    {
+      headerStr: "Worked Until:",
+      id: "worked-until",
+      type: "text",
+      value: workedUntil,
+    },
+  ];
+
   const handleEdit = (e) => {
     setIsSubmitted(false);
   };
@@ -93,22 +147,20 @@ function App() {
         </div>
         <div className="cv-form-section-content">
           <h2>Educational Experience</h2>
-          <EducationalExperienceForm
-            schoolName={schoolName}
-            titleOfStudy={titleOfStudy}
-            dateOfStudy={dateOfStudy}
-            setEducationalExperienceData={setEducationalExperienceData}
+          <FormDataSection
+            cvFormData={educationalExperienceCvFormData}
+            setData={setEducationalExperienceData}
+            isSubmitted={isSubmitted}
+            name="educational-experience"
           />
         </div>
         <div className="cv-form-section-content">
           <h2>Practical Experience</h2>
-          <PracticalExperienceForm
-            companyName={companyName}
-            positionTitle={positionTitle}
-            mainResponsibilities={mainResponsibilities}
-            workedFrom={workedFrom}
-            workedUntil={workedUntil}
-            setPracticalExperienceData={setPracticalExperienceData}
+          <FormDataSection
+            cvFormData={practicalExperienceCvFormData}
+            setData={setPracticalExperienceData}
+            isSubmitted={isSubmitted}
+            name="practical-experience"
           />
         </div>
       </div>
